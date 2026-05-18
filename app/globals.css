@@ -1730,6 +1730,7 @@ body {
   }
 
   .site-stage {
+    overflow-x: hidden;
     overflow-x: clip;
   }
 
