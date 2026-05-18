@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const elevatorFloors = [
   { id: 'hero', label: 'Hero' },
-  { id: 'feature', label: 'Interactive Systems' },
   { id: 'services', label: 'Services' },
+  { id: 'feature', label: 'Interactive Systems' },
   { id: 'why-us', label: 'Why Us' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -334,11 +334,11 @@ export default function Home() {
             <span className="gradient-text">Vertical Solutions</span>
           </div>
           <div className="hidden md:flex items-center gap-10 lg:gap-12 text-sm">
-            <a href="#feature" className="hover:text-[#c9a961] transition-smooth">
-              Interactive
-            </a>
             <a href="#services" className="hover:text-[#c9a961] transition-smooth">
               Services
+            </a>
+            <a href="#feature" className="hover:text-[#c9a961] transition-smooth">
+              Interactive
             </a>
             <a href="#why-us" className="hover:text-[#c9a961] transition-smooth">
               Why Us
@@ -449,10 +449,11 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <div className="hero-section-transition" aria-hidden="true"></div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="snap-section reveal-section order-3 w-full min-h-0 px-4 py-24 sm:min-h-[100svh] sm:py-32 sm:px-8 lg:px-10 bg-black/40">
+      <section id="services" className="snap-section reveal-section order-2 w-full min-h-0 px-4 py-24 sm:min-h-[100svh] sm:py-32 sm:px-8 lg:px-10 bg-black/40">
         <div className="reveal-content max-w-7xl mx-auto">
           <div className="reveal-heading text-center mb-12 sm:mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
@@ -525,7 +526,7 @@ export default function Home() {
       </section>
 
       {/* Interactive Feature Section */}
-      <section id="feature" className="snap-section reveal-section order-2 w-full min-h-0 px-4 py-24 sm:min-h-[100svh] sm:py-28 sm:px-8 lg:py-32 lg:px-10">
+      <section id="feature" className="snap-section reveal-section order-3 w-full min-h-0 px-4 py-24 sm:min-h-[100svh] sm:py-28 sm:px-8 lg:py-32 lg:px-10">
         <div className="reveal-content mx-auto flex min-h-0 max-w-6xl items-center sm:min-h-[calc(100svh-12rem)]">
           <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:gap-24 xl:gap-28">
             <div className="reveal-item max-w-xl">
