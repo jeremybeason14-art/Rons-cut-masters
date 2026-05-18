@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const elevatorFloors = [
   { id: 'hero', label: 'Hero' },
-  { id: 'feature', label: 'Features' },
+  { id: 'feature', label: 'Interactive Systems' },
   { id: 'services', label: 'Services' },
   { id: 'why-us', label: 'Why Us' },
   { id: 'contact', label: 'Contact' },
@@ -333,9 +333,9 @@ export default function Home() {
           <div className="min-w-0 text-base font-bold leading-tight sm:text-2xl">
             <span className="gradient-text">Vertical Solutions</span>
           </div>
-          <div className="hidden md:flex gap-9 items-center text-sm">
+          <div className="hidden md:flex items-center gap-10 lg:gap-12 text-sm">
             <a href="#feature" className="hover:text-[#c9a961] transition-smooth">
-              Feature
+              Interactive
             </a>
             <a href="#services" className="hover:text-[#c9a961] transition-smooth">
               Services

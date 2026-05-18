@@ -1558,13 +1558,14 @@ body {
   position: fixed;
   top: 50%;
   right: 28px;
-  z-index: 40;
-  display: none;
+  z-index: 90;
+  display: block;
   height: min(54vh, 430px);
   min-height: 320px;
   width: 96px;
   transform: translateY(-50%);
   pointer-events: none;
+  isolation: isolate;
 }
 
 .elevator-shaft {
@@ -1716,9 +1717,9 @@ body {
   backdrop-filter: blur(10px);
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1023px) {
   .elevator-nav {
-    display: block;
+    display: none;
   }
 }
 
