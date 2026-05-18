@@ -1344,11 +1344,10 @@ body {
 
 .elevator-intro-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 9999;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100dvh;
   min-height: 100svh;
   display: grid;
   place-items: center;
@@ -1378,7 +1377,7 @@ body {
   top: 0;
   bottom: 0;
   width: 50vw;
-  height: 100vh;
+  height: 100dvh;
   transform: translateX(0) translateZ(0) scaleX(1);
   transform-origin: center;
   transition:
@@ -1739,9 +1738,14 @@ body {
     padding: 0.8rem 1rem;
   }
 
+  header {
+    background: rgba(0, 0, 0, 0.86);
+  }
+
   header nav > div:first-child {
     min-width: 0;
-    font-size: 1.05rem;
+    max-width: 12rem;
+    font-size: clamp(1rem, 4.8vw, 1.25rem);
     line-height: 1.15;
   }
 
@@ -1766,20 +1770,36 @@ body {
   }
 
   #hero {
-    min-height: 100svh;
-    padding-top: 6.4rem;
-    padding-bottom: 4rem;
+    min-height: 100dvh;
+    padding-top: 6.25rem;
+    padding-bottom: 3.5rem;
+  }
+
+  #hero .hero-visual {
+    background-position: 57% center;
+  }
+
+  #hero .absolute.inset-0.bg-gradient-to-br {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.44) 36%, rgba(13, 13, 13, 0.92) 100%),
+      linear-gradient(135deg, rgba(26, 26, 26, 0.85), transparent 48%, rgba(26, 26, 26, 0.84));
+  }
+
+  #hero .absolute.top-0,
+  #hero .absolute.bottom-1\/4 {
+    width: 15rem;
+    height: 15rem;
   }
 
   #hero .hero-content h1 {
-    max-width: 22rem;
-    font-size: clamp(2.65rem, 13vw, 3.35rem);
-    line-height: 1.02;
+    max-width: 23rem;
+    font-size: clamp(2.85rem, 12vw, 3.45rem);
+    line-height: 1;
   }
 
   #hero .hero-content > div:first-of-type {
-    margin-top: 1.5rem;
-    margin-bottom: 2.8rem;
+    margin-top: 1.35rem;
+    margin-bottom: 2.25rem;
   }
 
   #hero .hero-content p {
@@ -1801,30 +1821,66 @@ body {
   #services,
   #why-us,
   #contact {
-    padding-top: 5.75rem;
-    padding-bottom: 5.75rem;
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
   }
 
   #feature .reveal-content {
     min-height: auto;
   }
 
+  #feature .reveal-content > .grid {
+    gap: 3rem;
+  }
+
+  #feature .reveal-item {
+    max-width: none;
+  }
+
+  #feature .reveal-item > p:first-child,
+  #contact .reveal-item > p:first-child,
+  .why-mission .reveal-item {
+    margin-bottom: 1rem;
+    font-size: 0.72rem;
+    line-height: 1.55;
+    letter-spacing: 0.24em;
+  }
+
   #feature h2,
   #services h2,
   #why-us h2,
   #contact h2 {
-    font-size: 2.35rem;
+    font-size: clamp(2.2rem, 9.6vw, 2.75rem);
     line-height: 1.08;
   }
 
+  #services .reveal-heading,
+  #why-us .reveal-heading {
+    margin-bottom: 3rem;
+  }
+
+  #services .reveal-heading p {
+    margin-top: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
   .feature-tab {
-    min-height: 118px;
-    padding: 1.1rem !important;
+    min-height: 108px;
+    padding: 1rem !important;
   }
 
   .feature-tab-icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .feature-tab .block.text-xl {
+    font-size: 1.05rem;
+  }
+
+  .feature-tab-action {
+    margin-top: 0.75rem;
   }
 
   .feature-copy-panel {
@@ -1832,17 +1888,17 @@ body {
   }
 
   .feature-visual {
-    min-height: 360px !important;
+    min-height: 340px !important;
   }
 
   .feature-visual > .relative {
-    min-height: 360px !important;
+    min-height: 340px !important;
     padding: 1.5rem !important;
   }
 
   .feature-visual-stage {
-    height: 290px;
-    max-width: 19rem;
+    height: 270px;
+    max-width: 18rem;
   }
 
   .elevator-cab-graphic {
@@ -1864,7 +1920,7 @@ body {
   }
 
   .service-card {
-    height: 360px !important;
+    height: 340px !important;
   }
 
   .service-card .relative {
@@ -1881,7 +1937,7 @@ body {
   }
 
   .why-feature-grid {
-    gap: 1.15rem;
+    gap: 1.25rem;
   }
 
   .why-feature {
@@ -1906,8 +1962,8 @@ body {
   }
 
   .why-mission {
-    margin-top: 8.5rem;
-    padding-top: 6.5rem;
+    margin-top: 7.25rem;
+    padding-top: 5.75rem;
   }
 
   .why-mission::before {
@@ -1921,7 +1977,7 @@ body {
 
   .why-mission .reveal-heading {
     margin-bottom: 1.65rem;
-    font-size: 2.15rem;
+    font-size: clamp(2rem, 8.5vw, 2.45rem);
     line-height: 1.12;
   }
 
@@ -1935,7 +1991,7 @@ body {
   }
 
   #contact {
-    min-height: 100svh;
+    min-height: auto;
   }
 
   #contact .reveal-content {
@@ -1944,7 +2000,7 @@ body {
   }
 
   #contact h2 {
-    font-size: 2.55rem;
+    font-size: clamp(2.35rem, 10vw, 3rem);
   }
 
   #contact .reveal-item > p:not(:first-child) {
@@ -1965,7 +2021,7 @@ body {
 
   .contact-form-card {
     border-radius: 12px;
-    padding: 1.4rem;
+    padding: 1.25rem;
   }
 
   .contact-form-card h3 {
@@ -1988,9 +2044,10 @@ body {
   }
 
   .elevator-intro-kicker {
-    max-width: 280px;
-    font-size: 10px;
+    max-width: 17rem;
+    font-size: 0.64rem;
     line-height: 1.6;
+    letter-spacing: 0.18em;
   }
 
   .elevator-intro-button {
@@ -1998,12 +2055,99 @@ body {
   }
 
   .elevator-intro-panel {
-    width: min(88vw, 22rem);
+    width: min(90vw, 23rem);
     padding: 0 1rem;
   }
 
   .elevator-intro-panel h1 {
-    font-size: clamp(2.4rem, 13vw, 3.5rem);
+    margin-bottom: 1.75rem;
+    font-size: clamp(2.75rem, 13vw, 3.85rem);
+  }
+
+  .elevator-intro-overlay {
+    width: 100%;
+    height: 100dvh;
+    min-height: 100dvh;
+  }
+
+  .elevator-intro-door {
+    height: 100dvh;
+    width: 50%;
+  }
+
+  .elevator-intro-seam::before {
+    width: 32vw;
+  }
+}
+
+@media (max-width: 430px) {
+  header nav {
+    padding-inline: 0.9rem;
+  }
+
+  header nav > div:first-child {
+    max-width: 10.5rem;
+  }
+
+  .book-now-button {
+    padding-inline: 0.78rem;
+  }
+
+  #hero {
+    padding-inline: 1rem;
+  }
+
+  #feature,
+  #services,
+  #why-us,
+  #contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .feature-tab > span {
+    gap: 0.9rem;
+  }
+
+  .feature-copy-panel .grid {
+    gap: 0.75rem;
+  }
+
+  .why-feature {
+    align-items: flex-start;
+  }
+
+  .contact-detail {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 390px) {
+  header nav > div:first-child {
+    max-width: 9.75rem;
+    font-size: 0.98rem;
+  }
+
+  .book-now-button {
+    gap: 0.4rem;
+    padding-inline: 0.68rem;
+    font-size: 0.7rem;
+  }
+
+  #hero .hero-content h1 {
+    font-size: clamp(2.55rem, 12vw, 3.05rem);
+  }
+
+  #hero .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .feature-tab .block.text-xl {
+    font-size: 0.98rem;
+  }
+
+  .contact-form-card {
+    padding: 1rem;
   }
 }
 

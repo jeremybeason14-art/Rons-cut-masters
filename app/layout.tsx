@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,8 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  applicationName: "Vertical Solutions",
   title: "Vertical Solutions Elevator Company | Premium Elevator Services DMV",
   description: "Professional elevator installation, maintenance, and repair services serving Washington DC, Maryland, and Virginia. 24/7 emergency service.",
+  openGraph: {
+    title: "Vertical Solutions Elevator Company",
+    description: "Premium elevator and escalator service for commercial buildings across the DMV.",
+    siteName: "Vertical Solutions",
+    type: "website",
+  },
+  appleWebApp: {
+    title: "Vertical Solutions",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

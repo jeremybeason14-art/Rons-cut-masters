@@ -329,8 +329,8 @@ export default function Home() {
 
       {/* Header Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#c9a961]/20">
-        <nav className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-4 flex justify-between items-center gap-6">
-          <div className="text-xl sm:text-2xl font-bold">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 py-3.5 sm:py-4 flex justify-between items-center gap-3 sm:gap-6">
+          <div className="min-w-0 text-base font-bold leading-tight sm:text-2xl">
             <span className="gradient-text">Vertical Solutions</span>
           </div>
           <div className="hidden md:flex gap-9 items-center text-sm">
@@ -385,7 +385,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="snap-section reveal-section order-1 relative min-h-screen w-full overflow-hidden pt-28 pb-20"
+        className="snap-section reveal-section order-1 relative min-h-[100dvh] w-full overflow-hidden px-4 pt-28 pb-16 sm:min-h-screen sm:px-0 sm:pb-20"
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -411,7 +411,7 @@ export default function Home() {
 
         {/* Hero Content */}
         <div
-          className="hero-content reveal-content relative z-10 flex flex-col items-center px-5 sm:px-8 lg:px-10"
+          className="hero-content reveal-content relative z-10 flex flex-col items-center px-0 sm:px-8 lg:px-10"
           style={{
             width: '100%',
             maxWidth: '1100px',
@@ -419,12 +419,12 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          <h1 className="reveal-heading mx-auto w-full text-center text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.08]">
+          <h1 className="reveal-heading mx-auto w-full max-w-[23rem] text-center text-[3rem] font-bold leading-none sm:max-w-none sm:text-6xl sm:leading-[1.08] lg:text-7xl xl:text-8xl">
             <span className="gradient-text">Vertical</span> Elevation{' '}
             <span className="text-[#c9a961]">Excellence</span>
           </h1>
-          <div className="mx-auto mt-8 mb-20 flex w-full max-w-[780px] justify-center text-center sm:mb-24">
-            <p className="mx-auto w-full text-center text-lg leading-8 text-gray-300 sm:text-xl">
+          <div className="mx-auto mt-6 mb-10 flex w-full max-w-[780px] justify-center text-center sm:mt-8 sm:mb-24">
+            <p className="mx-auto w-full text-center text-base leading-7 text-gray-300 sm:text-xl sm:leading-8">
               Premium elevator and escalator solutions for the modern building. Trusted by over 500+ businesses across the DMV area.
             </p>
           </div>
@@ -452,13 +452,13 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="snap-section reveal-section order-3 w-full min-h-[100svh] py-28 sm:py-32 px-5 sm:px-8 lg:px-10 bg-black/40">
+      <section id="services" className="snap-section reveal-section order-3 w-full min-h-0 px-4 py-24 sm:min-h-[100svh] sm:py-32 sm:px-8 lg:px-10 bg-black/40">
         <div className="reveal-content max-w-7xl mx-auto">
-          <div className="reveal-heading text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <div className="reveal-heading text-center mb-12 sm:mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
               Our <span className="gradient-text">Services</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-base leading-7 sm:text-lg max-w-2xl mx-auto">
               Comprehensive elevator and escalator solutions for every need
             </p>
           </div>
@@ -504,7 +504,7 @@ export default function Home() {
             ].map((service, index) => (
               <div
                 key={index}
-                className={`service-card service-card-${service.tone} reveal-card group relative h-[410px] overflow-hidden rounded-lg border border-[#c9a961]/20 bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d]`}
+                className={`service-card service-card-${service.tone} reveal-card group relative h-[340px] overflow-hidden rounded-lg border border-[#c9a961]/20 bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] sm:h-[410px]`}
               >
                 <div 
                   className="service-card-image absolute inset-0 bg-cover bg-center"
@@ -525,15 +525,15 @@ export default function Home() {
       </section>
 
       {/* Interactive Feature Section */}
-      <section id="feature" className="snap-section reveal-section order-2 w-full min-h-[100svh] py-24 sm:py-28 lg:py-32 px-5 sm:px-8 lg:px-10">
-        <div className="reveal-content mx-auto flex min-h-[calc(100svh-12rem)] max-w-6xl items-center">
-          <div className="grid w-full grid-cols-1 items-center gap-14 lg:grid-cols-[0.86fr_1.14fr] lg:gap-24 xl:gap-28">
+      <section id="feature" className="snap-section reveal-section order-2 w-full min-h-0 px-4 py-24 sm:min-h-[100svh] sm:py-28 sm:px-8 lg:py-32 lg:px-10">
+        <div className="reveal-content mx-auto flex min-h-0 max-w-6xl items-center sm:min-h-[calc(100svh-12rem)]">
+          <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:gap-24 xl:gap-28">
             <div className="reveal-item max-w-xl">
               <p className="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-[#c9a961]">Interactive Systems</p>
-              <h2 className="reveal-heading mb-10 text-4xl font-bold leading-tight sm:text-5xl">
+              <h2 className="reveal-heading mb-8 text-4xl font-bold leading-tight sm:mb-10 sm:text-5xl">
                 Vertical mobility, <span className="gradient-text">presented clearly</span>
               </h2>
-              <div className="mb-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div className="mb-8 grid grid-cols-1 gap-4 sm:mb-12 sm:grid-cols-2 sm:gap-5">
                 {featureOptions.map((feature, index) => (
                   <button
                     key={feature.label}
@@ -565,7 +565,7 @@ export default function Home() {
                   </button>
                 ))}
               </div>
-              <div key={activeFeature} className="feature-copy-panel glass-effect rounded-lg p-9 sm:p-10">
+              <div key={activeFeature} className="feature-copy-panel glass-effect rounded-lg p-6 sm:p-10">
                 <h3 className="mb-5 text-2xl font-bold leading-tight text-white">{featureOptions[activeFeature].title}</h3>
                 <p className="mb-9 text-base leading-8 text-gray-300">{featureOptions[activeFeature].description}</p>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -578,7 +578,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={`feature-visual reveal-card relative min-h-[560px] overflow-hidden rounded-lg border border-[#c9a961]/25 bg-black/45 shadow-2xl shadow-black/30 ${
+            <div className={`feature-visual reveal-card relative min-h-[340px] overflow-hidden rounded-lg border border-[#c9a961]/25 bg-black/45 shadow-2xl shadow-black/30 sm:min-h-[560px] ${
               activeFeature === 0 ? 'is-elevator' : 'is-escalator'
             }`}>
               <div
@@ -589,8 +589,8 @@ export default function Home() {
               ></div>
               <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[#0d0d0d]/70 to-black/90"></div>
               <div className="absolute inset-x-16 top-0 h-px bg-gradient-to-r from-transparent via-[#c9a961]/60 to-transparent"></div>
-              <div className="relative z-10 flex h-full min-h-[560px] items-center justify-center p-8 sm:p-12">
-                <div className="feature-visual-stage relative h-[440px] w-full max-w-md">
+              <div className="relative z-10 flex h-full min-h-[340px] items-center justify-center p-6 sm:min-h-[560px] sm:p-12">
+                <div className="feature-visual-stage relative h-[270px] w-full max-w-[18rem] sm:h-[440px] sm:max-w-md">
                   <div className="elevator-graphic absolute inset-0">
                     <div className="elevator-shaft-graphic"></div>
                     <div className="elevator-shaft-glow"></div>
@@ -618,7 +618,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-us" className="why-section snap-section reveal-section order-4 relative w-full min-h-[100svh] overflow-hidden py-32 sm:py-36 lg:py-44 px-5 sm:px-8 lg:px-10">
+      <section id="why-us" className="why-section snap-section reveal-section order-4 relative w-full min-h-0 overflow-hidden px-4 py-24 sm:min-h-[100svh] sm:py-36 sm:px-8 lg:py-44 lg:px-10">
         <div
           className="why-background absolute inset-0 bg-cover bg-center"
           style={{
@@ -630,7 +630,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/78 via-black/36 to-black/72"></div>
 
         <div className="reveal-content relative z-10 mx-auto max-w-[1280px]">
-          <h2 className="reveal-heading mb-20 text-center text-4xl sm:text-5xl font-bold lg:mb-24">
+          <h2 className="reveal-heading mb-12 text-center text-4xl sm:text-5xl font-bold lg:mb-24">
             Why <span className="gradient-text">Choose Us</span>
           </h2>
 
@@ -673,7 +673,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="why-mission story-reveal relative mx-auto mt-44 max-w-none px-0 pt-36 text-center sm:mt-56 sm:pt-44 lg:mt-72 lg:pt-52">
+          <div className="why-mission story-reveal relative mx-auto mt-28 max-w-none px-0 pt-24 text-center sm:mt-56 sm:pt-44 lg:mt-72 lg:pt-52">
             <div className="why-mission-divider" aria-hidden="true"></div>
             <div className="mission-atmosphere" aria-hidden="true"></div>
             <div className="relative z-10 mx-auto max-w-4xl">
@@ -702,7 +702,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="contact-section snap-section reveal-section order-5 relative w-full min-h-[100svh] overflow-hidden px-5 py-32 sm:px-8 sm:py-40 lg:px-10 lg:py-48">
+      <section id="contact" className="contact-section snap-section reveal-section order-5 relative w-full min-h-0 overflow-hidden px-4 py-24 sm:min-h-[100svh] sm:px-8 sm:py-40 lg:px-10 lg:py-48">
         <div
           className="contact-background absolute inset-0 bg-cover bg-center"
           style={{
@@ -713,10 +713,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/92 via-[#0d0d0d]/68 to-[#050505]/86"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d0d]/78 via-transparent to-[#0d0d0d]/94"></div>
 
-        <div className="reveal-content relative z-10 mx-auto grid min-h-[calc(100svh-18rem)] max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="reveal-content relative z-10 mx-auto grid min-h-0 max-w-7xl grid-cols-1 items-center gap-12 sm:min-h-[calc(100svh-18rem)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="reveal-item max-w-2xl">
             <p className="mb-6 text-sm font-semibold uppercase tracking-[0.32em] text-[#c9a961]">Start the conversation</p>
-            <h2 className="reveal-heading mb-8 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+            <h2 className="reveal-heading mb-6 text-4xl font-bold leading-tight sm:mb-8 sm:text-5xl lg:text-6xl">
               Let&apos;s Move Your <span className="gradient-text">Building Forward</span>
             </h2>
             <p className="mb-12 max-w-xl text-lg leading-8 text-gray-300">
