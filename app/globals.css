@@ -1826,6 +1826,67 @@ body {
     padding-bottom: 6.5rem;
   }
 
+  #services {
+    position: relative;
+    display: block;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible;
+    padding: 72px 20px !important;
+    background:
+      radial-gradient(circle at 74% 12%, rgba(201, 169, 97, 0.1), transparent 18rem),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(13, 13, 13, 0.96)),
+      #0d0d0d;
+  }
+
+  #services,
+  #services .reveal-content,
+  #services .reveal-content > *,
+  #services .reveal-heading,
+  #services .reveal-card {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  #services .reveal-content {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  #services .reveal-content > .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  #services .service-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    overflow: hidden;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  #services .service-card-image,
+  #services .service-card-overlay,
+  #services .service-card-glow {
+    pointer-events: none;
+  }
+
+  #services .service-card > .relative {
+    position: relative;
+    z-index: 2;
+  }
+
   #feature {
     position: relative;
     display: block;
